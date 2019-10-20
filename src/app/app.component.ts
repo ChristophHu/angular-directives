@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
     <h2>Attribute Directives</h2>
     <h3>ngStyle</h3>
     <div [ngStyle]="{'background-color': color}"></div>
-    
+
+    <hr>
+    <h3>Eigene Directives</h3>
+    <p appHighlightText>Hervorgehobener Text!</p>
   `,
   styles: [`
     div {
