@@ -23,6 +23,15 @@ import { Component } from '@angular/core';
     <ul>
       <li *ngFor="let element of elements; let i = index">{{ i }} - {{ element }}</li>
     </ul>
+
+    <hr>
+    <h3>ngSwitch</h3>
+    <div [ngSwitch]="value">
+      <p *ngSwitchCase="10">10</p>
+      <p *ngSwitchCase="100">100</p>
+      <p *ngSwitchCase="1000">1000</p>
+      <p *ngSwitchDefault>Sonstige</p>
+    </div>
   `,
   styles: [`
     div {
@@ -37,6 +46,7 @@ export class AppComponent {
   color = 'red'
   switch = true
   elements = ['text', 2, 3, 4, 5]
+  value = 101
   
   constructor() {
     setTimeout(() => {
