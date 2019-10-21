@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HighlightTextDirective } from './highlight-text.directive';
+import { TempDirective } from './temp.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightTextDirective
+    HighlightTextDirective,
+    TempDirective
   ],
   imports: [
     BrowserModule

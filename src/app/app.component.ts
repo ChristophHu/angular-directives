@@ -32,6 +32,10 @@ import { Component } from '@angular/core';
       <p *ngSwitchCase="1000">1000</p>
       <p *ngSwitchDefault>Sonstige</p>
     </div>
+
+    <hr>
+    <h2>Eigene Structural Directive</h2>
+    <div *appTemp="switch">Ist zu sehen</div>
   `,
   styles: [`
     div {
@@ -41,6 +45,7 @@ import { Component } from '@angular/core';
     `
   ]
 })
+
 export class AppComponent {
   title = 'angular-directives'
   color = 'red'
