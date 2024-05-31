@@ -1,10 +1,11 @@
-import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core'
 
 @Directive({
-  selector: '[appTemp]'
+  selector: '[template]',
+  standalone: true
 })
-export class TempDirective {
-  @Input('appTemp') set unless(condition: boolean) {
+export class TemplateDirective {
+  @Input('template') set unless(condition: boolean) {
     if (condition) {
       this.viewContainerRef.clear()
     } else {
@@ -13,5 +14,4 @@ export class TempDirective {
   }
 
   constructor(private templateRef: TemplateRef<any>, private viewContainerRef: ViewContainerRef) { }
-
 }
